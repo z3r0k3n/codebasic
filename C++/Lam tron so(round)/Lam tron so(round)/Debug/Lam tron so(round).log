@@ -1,0 +1,6 @@
+﻿  main.cpp
+d:\best\code\codebasic\codebasic\c++\lam tron so(round)\lam tron so(round)\main.cpp(6): warning C4273: 'round': inconsistent dll linkage
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\corecrt_math.h(533): note: see previous definition of 'round'
+d:\best\code\codebasic\codebasic\c++\lam tron so(round)\lam tron so(round)\main.cpp(13): warning C4326: return type of 'main' should be 'int' instead of 'void'
+     Creating library D:\best\code\codebasic\codebasic\C++\Lam tron so(round)\Debug\Lam tron so(round).lib and object D:\best\code\codebasic\codebasic\C++\Lam tron so(round)\Debug\Lam tron so(round).exp
+  Lam tron so(round).vcxproj -> D:\best\code\codebasic\codebasic\C++\Lam tron so(round)\Debug\Lam tron so(round).exe

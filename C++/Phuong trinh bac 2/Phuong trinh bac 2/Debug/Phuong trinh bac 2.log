@@ -1,0 +1,4 @@
+﻿  main.cpp
+d:\best\code\codebasic\codebasic\c++\phuong trinh bac 2\phuong trinh bac 2\main.cpp(80): warning C4326: return type of 'main' should be 'int' instead of 'void'
+d:\best\code\codebasic\codebasic\c++\phuong trinh bac 2\phuong trinh bac 2\main.cpp(19): warning C4715: 'ptb1': not all control paths return a value
+  Phuong trinh bac 2.vcxproj -> D:\best\code\codebasic\codebasic\C++\Phuong trinh bac 2\Debug\Phuong trinh bac 2 EquaDeg2.exe
