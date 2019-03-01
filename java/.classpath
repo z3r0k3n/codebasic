@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Kethua/Bai2.1"/>
+	<classpathentry kind="src" path="Lop và doi tuong"/>
+	<classpathentry excluding="De9/" kind="src" path="test"/>
+	<classpathentry kind="src" path="test/De9"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
