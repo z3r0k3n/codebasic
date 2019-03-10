@@ -1,0 +1,4 @@
+﻿  main.cpp
+d:\best\code\codebasic\codebasic\c++\xu ly lap trong lap trinh\xu ly lap trong lap trinh\main.cpp(39): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+d:\best\code\codebasic\codebasic\c++\xu ly lap trong lap trinh\xu ly lap trong lap trinh\main.cpp(164): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Xu ly lap trong lap trinh.vcxproj -> D:\best\code\codebasic\codebasic\C++\Xu ly lap trong lap trinh\Debug\Xu ly lap trong lap trinh.exe
