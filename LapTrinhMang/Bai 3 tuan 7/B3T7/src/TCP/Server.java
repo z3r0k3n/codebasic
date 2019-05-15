@@ -13,6 +13,7 @@ import java.net.Socket;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import jdk.internal.util.xml.impl.Input;
 
 /**
  *
@@ -61,10 +62,11 @@ public class Server {
             }while (true);
             //chat su dung thread để chạy nhập và xuất cùng lúc
             System.out.println("Đã chuyển qua chat");
+            new Read(socketServer);
             while (true) {
                 //nhan
                 
-                older = (Older) input.readObject();
+                /*older = (Older) input.readObject();
                 System.out.println("Server: ->" + older.getSend());
                 if(older.getSend().equals("ex"))
                 {
@@ -73,6 +75,7 @@ public class Server {
                     System.out.println("Ngắt kết nối");
                     break;
                 }
+                */
                 //gui
                 older.setSend(in.nextLine());
                 output.writeObject(older);
@@ -84,6 +87,36 @@ public class Server {
             Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    static class Read extends Thread
+    {
+        ObjectInputStream input= null;
+        Older older = null;
+        public Read (Socket socket)
+        {
+            try {
+                input=new ObjectInputStream(socket.getInputStream());
+            } catch (IOException ex) {
+                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            start();
+        }
+        @Override
+        public void run()
+        {
+            while (true) {                
+                try {
+                    older = (Older) input.readObject();
+                    if (older.getSend()!=null)
+                        System.out.println("Client: ->"+older.getSend());
+                } catch (IOException ex) {
+                    Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
         }
     }
 }

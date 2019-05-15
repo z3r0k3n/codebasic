@@ -8,6 +8,7 @@ package TCP;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -29,6 +30,8 @@ public class Client {
         ObjectInputStream input=null;
         ObjectOutputStream output = null;
         Older older=null;
+        
+        ServerSocket listener = new ServerSocket(/*muốn port bao nhiêu thì điền vào*/)
         
         //==========
         
@@ -52,12 +55,16 @@ public class Client {
             }while(older.getUser().equals("0"));
             //chat
             System.out.println("Đã chuyển qua chat");
+            //luong nhan
+            new read(socketClient);
+            //luong gui
             while (true){
-                //gui
                 
+                //gui
                 older.setSend(in.nextLine());
                 output.writeObject(older);
                 //nhan
+                /*
                 older = (Older) input.readObject();
                 if(older.getSend().equals("ex"))
                 {
@@ -67,6 +74,7 @@ public class Client {
                     break;
                 }
                 System.out.println("Server: ->"+older.getSend());
+                */
             }
         
         } catch (IOException ex) {
@@ -76,5 +84,7 @@ public class Client {
         }
         
     }
+    
+    
     
 }

@@ -38,6 +38,7 @@ public class Client_UDP {
             sendbuf= new byte[1024];
             receivebuf= new byte[1024];
             address= InetAddress.getLocalHost();
+            System.out.println("Address: "+address);
         } catch (SocketException ex) {
             Logger.getLogger(Client_UDP.class.getName()).log(Level.SEVERE, null, ex);
         } catch (UnknownHostException ex) {

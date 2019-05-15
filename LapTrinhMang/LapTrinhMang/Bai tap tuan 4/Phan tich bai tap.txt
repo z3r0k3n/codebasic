@@ -1,0 +1,26 @@
+Phân tích bài tập 
+*Sử dụng 3 cách chuyển TCP,UDP và RMI thực hiện yêu câu sau.
+	- Client hiển thị menu chức năng cho người dùng chọn gồm các chức năng sau:
+		
+		+ Xem toàn bộ danh sách sinh viên.
+		
+		+ Thêm mới sinh viên gồm (ID, Name, dia chi, tuoi): nếu sinh viên đó trùng id thì báo về cho người dùng biết rằng
+		việc thêm moi sinh vien không thành công ngược lại thì trả về thành công
+		
+		+ Xóa một sinh viên: người dùng Nhập ID của sinh viên nếu tìm thấy ID chương trình tiến hành xóa sinh viên và nhận
+		được thông báo thành công còn ngược lại thì chương trình sẽ báo ko tìm thấy id
+		
+		+ Cập nhập thông tin một sinh vien: Người dùng sẽ nhập mã sinh viên cần cập nhật nếu không có id thì sẽ báo ko có id 
+		cần chỉnh sửa. nếu ID có thì tiến hành cập nhập tên, quê quán, Ngay sinh.
+		
+		+ Tìm sinh viên: người dùng nhập ID của sinh viên cần tìm server trả về thông tin theo mã sinh viên nếu sinh viên 
+		đó không có trong danh sách thì thông báo sinh viên đó không năm trong danh sách.
+		
+* file Bài tập gồm 5 phần 
+		
+	- source code database(Sinh_vien.sql)
+		
+	- 4 project:
+		+ Java_SQL: Chứa code Java_SQL, Sinhvien, Older.
+		+ 3 project còn lại mỗi cái chứa code thực hiện 3 kiểu chuyển TCP,UDP và RMI tên lần lượt là
+		"TCP_SQL","UDP_SQL","RMI_SQL" có 2 Packages: Client (Manager,ClientCtr) và Server(ServerCtr).

@@ -40,6 +40,10 @@ public class ServerCtr {
             output = new ObjectOutputStream(arrayout);
             output.writeObject(odin);
             sendBuff= arrayout.toByteArray();
+            System.out.println("address Server: "+InetAddress.getLocalHost());
+            System.out.println("port Server: "+9999);
+            System.out.println("address client: "+receivePacket.getAddress());
+            System.out.println("port client: "+receivePacket.getPort());
             InetAddress address= receivePacket.getAddress();
             int port= receivePacket.getPort();
             sendClient= new DatagramPacket(sendBuff, sendBuff.length, address, port);

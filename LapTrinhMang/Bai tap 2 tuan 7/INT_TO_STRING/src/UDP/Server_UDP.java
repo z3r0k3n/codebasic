@@ -55,7 +55,9 @@ public class Server_UDP {
             System.out.println(sendsr);
             sendbuf = sendsr.getBytes();
             address = receiveClient.getAddress();
+            System.out.println("Address: "+address);
             port= receiveClient.getPort();
+            System.out.println("Port: "+ port);
             sendClient= new DatagramPacket(sendbuf, sendbuf.length, address, port);
             theServer.send(sendClient);
         } catch (IOException ex) {
